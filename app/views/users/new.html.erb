@@ -1,0 +1,25 @@
+<h1>Register</h1>
+<form action="/users" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+First Name:<input type="text" name="user[first_name]" value=""><br><br>
+Last Name:<input type="text" name="user[last_name]" value=""><br><br>
+Email:<input type="text" name="user[email]" value=""><br><br>
+City:<input type="text" name="user[location]" value="">
+State:<select class="" name="user[state]">
+  <option value="IL">IL</option>
+  <option value="NY">NY</option>
+  <option value="CA">CA</option>
+  <option value="WY">WY</option>
+</select><br><br>
+Password:<input type="password" name="user[password]" value=""><br><br>
+Confirm Password:<input type="password" name="user[password_confirmation]" value=""><br><br>
+<input type="submit" name="" value="Register"><br><br>
+</form>
+
+<h1>Login</h1>
+<form action="/users/login" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+Email:<input type="text" name="email" value=""><br><br>
+Password:<input type="password" name="password" value=""><br><br>
+<input type="submit" name="" value="Login">
+</form>
